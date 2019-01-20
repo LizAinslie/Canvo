@@ -1,0 +1,25 @@
+{
+    "name": "canvo",
+    "version": "1.0.0",
+    "description": "An easy to implement, well-featured image editor that uses HTML5 Canvas.",
+    "main": "dist/raildash.js",
+    "module": "dist/raildash.es.js",
+    "jsnext:main": "dist/raildash.es.js",
+    "cjs:main": "dist/raildash.cjs.js",
+    "repository": "https://github.com/RailRunner166/Canvo.git",
+    "author": "Landon Gravat <railinator4903@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "build": "rollup -c"
+    },
+    "devDependencies": {
+        "rollup": "^1.1.0",
+        "rollup-plugin-terser": "^4.0.2",
+        "rollup-plugin-typescript": "^1.0.0",
+        "ts-node": "^7.0.1",
+        "tslint": "^5.12.1",
+        "typescript": "^3.2.4"
+    },
+    "dependencies": {}
+}
