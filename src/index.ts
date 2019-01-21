@@ -6,45 +6,37 @@ class Editor {
 	private isDrawing: boolean = false;
     private lastX: number;
     private lastY: number;
-    private div: any;
+    private defaultLineWidth: number;
+    private defaultColor: string;
 
 	constructor(options: IEditorOptions) {
-        if (options.renderDiv instanceof HTMLElement) this.div = options.renderDiv;
-        else this.div = document.getElementById(options.renderDiv);
-
-		this.canvas = <HTMLCanvasElement> document.createElement('canvas');
-		this.c = this.canvas.getContext('2d');
+        this.canvas = <HTMLCanvasElement> document.getElementById('editor');
+        this.c = this.canvas.getContext('2d');
 
         this.canvas.style.width = '100%';
-        this.canvas.style.height = 'auto';
+        this.canvas.style.height = '100%';
 
-        this.div.height = window.innerHeight;
-        this.div.width = window.innerWidth;
+        this.defaultLineWidth = options.defaults.width || 7;
+        this.defaultColor = options.defaults.color || '#000000';
 
-        this.c.lineJoin = 'round';
-        this.c.lineCap = 'round';
-        this.c.lineWidth = options.defaults.width || 7;
-        this.c.strokeStyle = options.defaults.color || '#000000';
+        this.draw = this.draw.bind(this);
+        this.initEvents = this.initEvents.bind(this);
+        this.toDataUri = this.toDataUri.bind(this);
+        this.setColor = this.setColor.bind(this);
+        this.setLineWidth = this.setLineWidth.bind(this);
 
         this.initEvents();
-
-        this.div.appendChild(this.canvas);
 	}
 
-    initEvents() {
-        this.canvas.addEventListener('mousedown', (e) => {
+    private initEvents(): void {
+        this.canvas.addEventListener('mousedown', e => {
             this.isDrawing = true;
             [this.lastX, this.lastY] = [e.offsetX, e.offsetY];
         });
 
-        this.canvas.addEventListener('mousemove', this.draw.bind(this));
+        this.canvas.addEventListener('mousemove', this.draw);
         this.canvas.addEventListener('mouseup', () => this.isDrawing = false);
         this.canvas.addEventListener('mouseout', () => this.isDrawing = false);
-
-        window.addEventListener('resize', () => {
-            this.div.height = window.innerHeight;
-            this.div.width = window.innerWidth;
-        });
     }
 
 	setColor(newColor: string): void {
@@ -56,27 +48,30 @@ class Editor {
     }
 
 	loadImageFromDataUri(dataUri: string): void {
-		const img = new Image;
+		const img: HTMLImageElement = new Image;
 
-		img.onload = () => {
-			const imgHalfWidth: number = img.width / 2;
-			const imgHalfHeight: number = img.height / 2;
+        img.onload = (): void => {
+            this.canvas.style.width = `${img.width}px`;
+            this.canvas.style.height = `${img.height}px`;
+            this.canvas.width = img.width;
+            this.canvas.height = img.height;
 
-			const canvasHalfWidth: number = this.canvas.width / 2;
-			const canvasHalfHeight: number = this.canvas.height / 2;
+            this.c.lineJoin = 'round';
+            this.c.lineCap = 'round';
+            this.c.lineWidth = this.defaultLineWidth || 7;
+            this.c.strokeStyle = this.defaultColor || '#000000';
 
-			this.c.drawImage(img, canvasHalfWidth - imgHalfWidth, canvasHalfHeight - imgHalfHeight);
-		};
+            this.c.drawImage(img, 0, 0);
+        };
 
-		img.src = dataUri;
+        img.src = dataUri;
     }
 
-    toDataUri() {
-        return this.canvas.toDataURL();
+    toDataUri(): string {
+        return this.canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
     }
 
-    draw(e) {
-        // stop the function if they are not mouse down
+    draw(e): void {
         if(!this.isDrawing) return;
 
         this.c.beginPath();
