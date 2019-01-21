@@ -39,15 +39,15 @@ class Editor {
         this.canvas.addEventListener('mouseout', () => this.isDrawing = false);
     }
 
-	setColor(newColor: string): void {
+	public setColor(newColor: string): void {
 		this.c.strokeStyle = newColor;
 	}
 
-    setLineWidth(newWidth: number): void {
+    public setLineWidth(newWidth: number): void {
         this.c.lineWidth = newWidth;
     }
 
-	loadImageFromDataUri(dataUri: string): void {
+	public loadImageFromDataUri(dataUri: string): void {
 		const img: HTMLImageElement = new Image;
 
         img.onload = (): void => {
@@ -67,11 +67,11 @@ class Editor {
         img.src = dataUri;
     }
 
-    toDataUri(): string {
+    public toDataUri(): string {
         return this.canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
     }
 
-    draw(e): void {
+    private draw(e): void {
         if(!this.isDrawing) return;
 
         this.c.beginPath();
