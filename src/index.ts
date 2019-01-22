@@ -10,13 +10,15 @@ class Editor {
     private defaultColor: string;
 
 	constructor(options: IEditorOptions) {
-        this.canvas = <HTMLCanvasElement> document.getElementById('editor');
+        this.canvas = <HTMLCanvasElement> document.getElementById(options.canvasId);
         this.c = this.canvas.getContext('2d');
 
-        this.canvas.style.width = '100%';
-        this.canvas.style.height = '100%';
+        this.canvas.style.width = options.defaults.width ? `${options.defaults.width}px` : '100%';
+        this.canvas.style.height = options.defaults.height ? `${options.defaults.height}px` : '100%';
+        this.canvas.height = options.defaults.height || this.canvas.clientHeight;
+        this.canvas.width = options.defaults.width || this.canvas.clientWidth;
 
-        this.defaultLineWidth = options.defaults.width || 7;
+        this.defaultLineWidth = options.defaults.lineWidth || 7;
         this.defaultColor = options.defaults.color || '#000000';
 
         this.draw = this.draw.bind(this);
@@ -24,8 +26,10 @@ class Editor {
         this.toDataUri = this.toDataUri.bind(this);
         this.setColor = this.setColor.bind(this);
         this.setLineWidth = this.setLineWidth.bind(this);
+        this.setDefaults = this.setDefaults.bind(this);
 
         this.initEvents();
+        this.setDefaults();
 	}
 
     private initEvents(): void {
@@ -56,10 +60,7 @@ class Editor {
             this.canvas.width = img.width;
             this.canvas.height = img.height;
 
-            this.c.lineJoin = 'round';
-            this.c.lineCap = 'round';
-            this.c.lineWidth = this.defaultLineWidth || 7;
-            this.c.strokeStyle = this.defaultColor || '#000000';
+            this.setDefaults();
 
             this.c.drawImage(img, 0, 0);
         };
@@ -79,6 +80,13 @@ class Editor {
         this.c.lineTo(e.offsetX, e.offsetY);
         this.c.stroke();
         [this.lastX, this.lastY] = [e.offsetX, e.offsetY];
+    }
+
+    private setDefaults() {
+        this.c.lineJoin = 'round';
+        this.c.lineCap = 'round';
+        this.c.lineWidth = this.defaultLineWidth || 8;
+        this.c.strokeStyle = this.defaultColor || '#000000';
     }
 }
 

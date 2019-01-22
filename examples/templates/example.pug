@@ -1,0 +1,29 @@
+doctype html
+html
+	include includes/head
+	body
+		nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+			.container
+				a.navbar-brand(href='/') Canvo Examples
+				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+
+				.collapse.navbar-collapse#navbar
+					ul.navbar-nav.mr-auto
+						li.nav-item
+							a.nav-link(href='/') Home
+
+		.jumbotron.jumbotron-fluid
+			.container
+				h1.display-3= example.name
+				p.lead= example.description
+			hr.my-4
+			.container
+				p.lead
+					a.btn.btn-success.btn-lg(href='https://github.com/RailRunner166/Canvo/tree/' role='button') View on GitHub
+
+		.container
+			canvas#editor
+
+		script(type='text/javascript' src='/static/js/canvo.browser.js')
+		script(type='text/javascript' src='/static/js/examples/' + example.slug + '.js')

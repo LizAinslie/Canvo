@@ -1,7 +1,9 @@
 export interface IEditorOptions {
-    renderDiv: HTMLElement | string
+    canvasId: string
     defaults?: {
         color?: string
+        lineWidth?: number
+        height?: number
         width?: number
     }
 };

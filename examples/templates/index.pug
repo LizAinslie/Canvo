@@ -1,0 +1,31 @@
+html(lang='en')
+	include includes/head
+	body
+		nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+			.container
+				a.navbar-brand(href='/') Canvo Examples
+				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+
+				.collapse.navbar-collapse#navbar
+					ul.navbar-nav.mr-auto
+						li.nav-item.active
+							a.nav-link(href='/') Home
+								span.sr-only (current)
+
+		.jumbotron.jumbotron-fluid
+			.container
+				h1.display-3 Canvo Examples
+				p.lead Below are some homemade examples of how to use Canvo.
+
+		.container.mt-5
+			.card-columns
+				each example, index in examples
+					.card
+						img.card-img-top(alt='Screenshot for example #' + (index + 1) src=example.screenshot)
+						.card-body
+							h5.card-title= example.name
+							p.card-text=example.description
+							a.card-link(href='/example/' + example.slug rel='nofollow') Check it out!
+				else
+					p.lead There are no examples at this time.

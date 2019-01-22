@@ -11,9 +11,13 @@
     "license": "MIT",
     "private": false,
     "scripts": {
-        "build": "rollup -c"
+        "build": "rollup -c",
+        "examples": "node examples/server.js",
+        "prepublishOnly": "yarn build && yarn docs"
     },
     "devDependencies": {
+        "express": "^4.16.4",
+        "pug": "^2.0.3",
         "rollup": "^1.1.0",
         "rollup-plugin-terser": "^4.0.2",
         "rollup-plugin-typescript": "^1.0.0",
@@ -21,5 +25,7 @@
         "tslint": "^5.12.1",
         "typescript": "^3.2.4"
     },
-    "dependencies": {}
+    "dependencies": {
+        "serve": "^10.1.1"
+    }
 }
