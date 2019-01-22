@@ -1,0 +1,6 @@
+.theia
+*.log
+.rpt2_cache
+examples
+docs
+*.lock

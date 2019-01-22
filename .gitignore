@@ -1,3 +1,8 @@
+.rpt2_cache
+.theia
+dist/canvo.cjs.js
+dist/canvo.es.js
+
 # Logs
 logs
 *.log
