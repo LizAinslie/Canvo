@@ -13,16 +13,20 @@
     "scripts": {
         "build": "rollup -c",
         "examples": "node examples/server.js",
+        "docs": "gulp docs",
         "prepublishOnly": "yarn build && yarn docs"
     },
     "devDependencies": {
         "express": "^4.16.4",
+        "gulp": "^4.0.0",
+        "gulp-typedoc": "^2.2.1",
         "pug": "^2.0.3",
         "rollup": "^1.1.0",
         "rollup-plugin-terser": "^4.0.2",
         "rollup-plugin-typescript": "^1.0.0",
         "ts-node": "^7.0.1",
         "tslint": "^5.12.1",
+        "typedoc": "^0.14.2",
         "typescript": "^3.2.4"
     },
     "dependencies": {

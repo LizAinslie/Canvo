@@ -20,10 +20,14 @@ html
 			hr.my-4
 			.container
 				p.lead
-					a.btn.btn-success.btn-lg(href='https://github.com/RailRunner166/Canvo/tree/' role='button') View on GitHub
+					a.btn.btn-success.btn-lg(href='https://github.com/RailRunner166/Canvo/tree/master/examples/static/js/examples/' + example.slug + '.js' role='button' rel='nofollow noopener' target='_blank')
+						i.fab.fa-github &nbsp;
+						span View on GitHub
 
 		.container
 			canvas#editor
+
+		include includes/footer
 
 		script(type='text/javascript' src='/static/js/canvo.browser.js')
 		script(type='text/javascript' src='/static/js/examples/' + example.slug + '.js')
