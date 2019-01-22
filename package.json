@@ -1,11 +1,11 @@
 {
     "name": "canvo",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "An easy to implement, well-featured image editor that uses HTML5 Canvas.",
     "main": "dist/canvo.cjs.js",
     "module": "dist/canvo.es.js",
     "types": "./types/index.d.ts",
-  	"homepage": "https://railrunner16.me/Canvo/",
+    "homepage": "https://railrunner16.me/Canvo/",
     "repository": "https://github.com/RailRunner166/Canvo.git",
     "author": "Landon Gravat <railinator4903@gmail.com>",
     "license": "MIT",
@@ -29,11 +29,11 @@
         "typedoc": "^0.14.2",
         "typescript": "^3.2.4"
     },
-	"keywords": [
-		"image",
-		"editor",
-		"image-editor",
-		"image-manipulation",
-		"canvas"
-	]
+    "keywords": [
+        "image",
+        "editor",
+        "image-editor",
+        "image-manipulation",
+        "canvas"
+    ]
 }
