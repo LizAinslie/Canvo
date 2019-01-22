@@ -70,6 +70,22 @@
 				<h3 id="browser">Browser</h3>
 				<p>Just download <code>canvo.browser.js</code> from the <code>dist/</code> directory in this repo and include the following in the bottom of your <code>&lt;body&gt;</code> before any other scripts:</p>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'text/javscript'</span> <span class="hljs-attr">src</span>=<span class="hljs-string">'/path/to/canvo.browser.js'</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<h3 id="bower">Bower</h3>
+				<p>Run this in your projects main directory:</p>
+				<pre><code class="language-sh">bower install canvo</code></pre>
+				<p>Then include it like this:</p>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'text/javascript'</span> <span class="hljs-attr">src</span>=<span class="hljs-string">'/path/to/bower_components/canvo/dist/canvo.browser.js'</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+				<h3 id="node">Node</h3>
+				<p>Use your choice of package manager to install <code>canvo</code>, and import it using one of these two methods:</p>
+				<p><strong>CommonJS (e.g. <code>require()</code>):</strong></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> Editor = <span class="hljs-built_in">require</span>(<span class="hljs-string">'canvo'</span>);
+
+<span class="hljs-comment">// Use it below (you should know this)...</span></code></pre>
+				<p><strong>ESModules (e.g. <a href="https://webpack.js.org/">Webpack</a> or <a href="https://rollupjs.com">Rollup</a>):</strong></p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> Editor <span class="hljs-keyword">from</span> <span class="hljs-string">'canvo'</span>;
+
+<span class="hljs-comment">// Use it below (you should know this)...</span></code></pre>
+				<p>You should know this stuff anyway, I just try to make my READMEs idiot-proof.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
