@@ -5,6 +5,7 @@
     "main": "dist/canvo.cjs.js",
     "module": "dist/canvo.es.js",
     "types": "./types/index.d.ts",
+  	"homepage": "https://railrunner16.me/Canvo/",
     "repository": "https://github.com/RailRunner166/Canvo.git",
     "author": "Landon Gravat <railinator4903@gmail.com>",
     "license": "MIT",
@@ -27,5 +28,12 @@
         "tslint": "^5.12.1",
         "typedoc": "^0.14.2",
         "typescript": "^3.2.4"
-    }
+    },
+	"keywords": [
+		"image",
+		"editor",
+		"image-editor",
+		"image-manipulation",
+		"canvas"
+	]
 }

@@ -1,0 +1,24 @@
+{
+	"name": "canvo",
+	"description": "An easy to implement, well-featured image editor that uses HTML5 Canvas.",
+	"main": "dist/canvo.browser.js",
+	"authors": [
+		"Landon Gravat <railinator4903@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"image",
+		"editor",
+		"image-editor",
+		"image-manipulation",
+		"canvas"
+	],
+	"homepage": "https://railrunner16.me/Canvo/",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
