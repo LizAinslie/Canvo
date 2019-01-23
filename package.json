@@ -1,6 +1,6 @@
 {
     "name": "canvo",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "An easy to implement, well-featured image editor that uses HTML5 Canvas.",
     "main": "dist/canvo.cjs.js",
     "module": "dist/canvo.es.js",
