@@ -8,6 +8,7 @@ export default {
 	plugins: [
 		typescript({
 			typescript: require('typescript'),
+			useTsconfigDeclarationDir: true,
 		}),
         terser(),
 	],

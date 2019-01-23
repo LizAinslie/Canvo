@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ICoordinates | Canvo</title>
+	<title>Line | Canvo</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,28 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="icoordinates.html">ICoordinates</a>
+					<a href="line.html">Line</a>
 				</li>
 			</ul>
-			<h1>Interface ICoordinates</h1>
+			<h1>Class Line</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A line</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ICoordinates</span>
+						<span class="target">Line</span>
 					</li>
 				</ul>
 			</section>
@@ -79,36 +86,158 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="line.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="icoordinates.html#x" class="tsd-kind-icon">x</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="icoordinates.html#y" class="tsd-kind-icon">y</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="line.html#pointa" class="tsd-kind-icon">pointA</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="line.html#pointb" class="tsd-kind-icon">pointB</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="line.html#setpointa" class="tsd-kind-icon">set<wbr>PointA</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="line.html#setpointb" class="tsd-kind-icon">set<wbr>PointB</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Line<span class="tsd-signature-symbol">(</span>pointA<span class="tsd-signature-symbol">: </span><a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a>, pointB<span class="tsd-signature-symbol">: </span><a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="line.html" class="tsd-signature-type">Line</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in Objects/Line.ts:8</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new Line</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pointA: <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The line&#39;s initial <code>A</code> point</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>pointB: <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The line&#39;s initial <code>B</code> point</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="line.html" class="tsd-signature-type">Line</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="x" class="tsd-anchor"></a>
-					<h3>x</h3>
-					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="pointa" class="tsd-anchor"></a>
+					<h3>pointA</h3>
+					<div class="tsd-signature tsd-kind-icon">pointA<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Interfaces/ICoordinates.ts:2</li>
+							<li>Defined in Objects/Line.ts:7</li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="y" class="tsd-anchor"></a>
-					<h3>y</h3>
-					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="pointb" class="tsd-anchor"></a>
+					<h3>pointB</h3>
+					<div class="tsd-signature tsd-kind-icon">pointB<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Interfaces/ICoordinates.ts:3</li>
+							<li>Defined in Objects/Line.ts:8</li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setpointa" class="tsd-anchor"></a>
+					<h3>set<wbr>PointA</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>PointA<span class="tsd-signature-symbol">(</span>newCoords<span class="tsd-signature-symbol">: </span><a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in Objects/Line.ts:25</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the line&#39;s <code>A</code> point</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>newCoords: <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new coordinates for the line&#39;s point A</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setpointb" class="tsd-anchor"></a>
+					<h3>set<wbr>PointB</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>PointB<span class="tsd-signature-symbol">(</span>newCoords<span class="tsd-signature-symbol">: </span><a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in Objects/Line.ts:34</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the line&#39;s <code>B</code> point</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>newCoords: <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The new coordinates for the line&#39;s point B</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -123,28 +252,37 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class">
-						<a href="../classes/editor.html" class="tsd-kind-icon">Editor</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="../classes/line.html" class="tsd-kind-icon">Line</a>
+						<a href="editor.html" class="tsd-kind-icon">Editor</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="icoordinates.html" class="tsd-kind-icon">ICoordinates</a>
+					<li class="current tsd-kind-class">
+						<a href="line.html" class="tsd-kind-icon">Line</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="icoordinates.html#x" class="tsd-kind-icon">x</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="line.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="icoordinates.html#y" class="tsd-kind-icon">y</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="line.html#pointa" class="tsd-kind-icon">pointA</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="line.html#pointb" class="tsd-kind-icon">pointB</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="line.html#setpointa" class="tsd-kind-icon">set<wbr>PointA</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="line.html#setpointb" class="tsd-kind-icon">set<wbr>PointB</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface">
-						<a href="ieditoroptions.html" class="tsd-kind-icon">IEditor<wbr>Options</a>
+						<a href="../interfaces/icoordinates.html" class="tsd-kind-icon">ICoordinates</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ieditoroptions.html" class="tsd-kind-icon">IEditor<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
