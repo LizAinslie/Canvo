@@ -1,14 +1,46 @@
-import { IEditorOptions } from './api';
+import { IEditorOptions, ICoordinates } from './api';
 
 class Editor {
+	/**
+	 * The editor's canvas
+	 */
 	private canvas: HTMLCanvasElement;
-	private c: CanvasRenderingContext2D;
-	private isDrawing: boolean = false;
+	/**
+	 * The rendering context of the editor's canvas
+	 */
+	public c: CanvasRenderingContext2D;
+	/**
+	 * Whether or not the user is drawing on the canvas
+	 */
+	public isDrawing: boolean = false;
+	/**
+	 * @ignore
+	 */
     private lastX: number;
+	/**
+	 * @ignore
+	 */
     private lastY: number;
+	/**
+	 * The default brush width, defined when the editor is created
+	 */
     private defaultLineWidth: number;
+	/**
+	 * The default brush color, defined when the editor is created
+	 */
     private defaultColor: string;
 
+	/**
+	 * Create a new editor
+	 * @param {IEditorOptions} options The editor options to bootstrap the editor with
+	 * @param {string} options.canvasId The ID of the canvas to use with the editor
+	 * @param {object} [options.defaults] The default values to bootstrap the editor with
+	 * @param {string} [options.defaults.color] The editor's default brush color
+	 * @param {number} [options.defaults.lineWidth] The editor's default brush width
+	 * @param {number} [options.defaults.height] The editor's default height
+	 * @param {number} [options.defaults.width] The editor's default width
+	 * @returns {Editor}
+	 */
 	constructor(options: IEditorOptions) {
         this.canvas = <HTMLCanvasElement> document.getElementById(options.canvasId);
         this.c = this.canvas.getContext('2d');
@@ -86,7 +118,7 @@ class Editor {
 	 * @param {string} dataUri The data uri of the image to load
 	 * @returns {void}
 	 */
-	public loadImageFromDataUri(dataUri: string): void {
+	public loadBackgroundImageFromDataUri(dataUri: string): void {
 		const img: HTMLImageElement = new Image;
 
         img.onload = (): void => {
@@ -98,6 +130,24 @@ class Editor {
             this.setDefaults();
 
             this.c.drawImage(img, 0, 0);
+        };
+
+        img.src = dataUri;
+    }
+
+	/**
+	 * Place an image on the canvas at a specified location, using a data URI as the source
+	 * @param {string} dataUri The data URI to load image data from
+	 * @param {ICoordinates} placement The coordinates to place the image at
+	 * @param {number} placement.x=0 The X coordinate to place the image at
+	 * @param {number} placement.y=0 The Y coordinate to place the image at
+	 * @returns {void}
+	 */
+	public loadImageFromDataUri(dataUri: string, placement: ICoordinates = { x: 0, y: 0 }): void {
+		const img: HTMLImageElement = new Image;
+
+        img.onload = (): void => {
+            this.c.drawImage(img, placement.x, placement.y);
         };
 
         img.src = dataUri;

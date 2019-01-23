@@ -84,21 +84,20 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="editor.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#c" class="tsd-kind-icon">c</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="editor.html#c" class="tsd-kind-icon">c</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#canvas" class="tsd-kind-icon">canvas</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#defaultcolor" class="tsd-kind-icon">default<wbr>Color</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#defaultlinewidth" class="tsd-kind-icon">default<wbr>Line<wbr>Width</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#isdrawing" class="tsd-kind-icon">is<wbr>Drawing</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#lastx" class="tsd-kind-icon">lastX</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#lasty" class="tsd-kind-icon">lastY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="editor.html#isdrawing" class="tsd-kind-icon">is<wbr>Drawing</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="editor.html#loadbackgroundimagefromdatauri" class="tsd-kind-icon">load<wbr>Background<wbr>Image<wbr>From<wbr>Data<wbr>Uri</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="editor.html#loadimagefromdatauri" class="tsd-kind-icon">load<wbr>Image<wbr>From<wbr>Data<wbr>Uri</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="editor.html#setcolor" class="tsd-kind-icon">set<wbr>Color</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="editor.html#setlinewidth" class="tsd-kind-icon">set<wbr>Line<wbr>Width</a></li>
@@ -120,13 +119,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L10">index.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L31">index.ts:31</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a new editor</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>options: <a href="../interfaces/ieditoroptions.html" class="tsd-signature-type">IEditorOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The editor options to bootstrap the editor with</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="editor.html" class="tsd-signature-type">Editor</a></h4>
@@ -134,17 +143,22 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="c" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> c</h3>
+					<h3>c</h3>
 					<div class="tsd-signature tsd-kind-icon">c<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CanvasRenderingContext2D</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L5">index.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L11">index.ts:11</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The rendering context of the editor&#39;s canvas</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="canvas" class="tsd-anchor"></a>
@@ -152,9 +166,14 @@
 					<div class="tsd-signature tsd-kind-icon">canvas<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLCanvasElement</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L4">index.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L7">index.ts:7</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The editor&#39;s canvas</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="defaultcolor" class="tsd-anchor"></a>
@@ -162,9 +181,14 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L10">index.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L31">index.ts:31</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The default brush color, defined when the editor is created</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="defaultlinewidth" class="tsd-anchor"></a>
@@ -172,54 +196,44 @@
 					<div class="tsd-signature tsd-kind-icon">default<wbr>Line<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L9">index.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L27">index.ts:27</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The default brush width, defined when the editor is created</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="isdrawing" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> is<wbr>Drawing</h3>
+					<h3>is<wbr>Drawing</h3>
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Drawing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L6">index.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L15">index.ts:15</a></li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="lastx" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> lastX</h3>
-					<div class="tsd-signature tsd-kind-icon">lastX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L7">index.ts:7</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="lasty" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> lastY</h3>
-					<div class="tsd-signature tsd-kind-icon">lastY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L8">index.ts:8</a></li>
-						</ul>
-					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether or not the user is drawing on the canvas</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="loadimagefromdatauri" class="tsd-anchor"></a>
-					<h3>load<wbr>Image<wbr>From<wbr>Data<wbr>Uri</h3>
+					<a name="loadbackgroundimagefromdatauri" class="tsd-anchor"></a>
+					<h3>load<wbr>Background<wbr>Image<wbr>From<wbr>Data<wbr>Uri</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">load<wbr>Image<wbr>From<wbr>Data<wbr>Uri<span class="tsd-signature-symbol">(</span>dataUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Background<wbr>Image<wbr>From<wbr>Data<wbr>Uri<span class="tsd-signature-symbol">(</span>dataUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L89">index.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L121">index.ts:121</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -241,6 +255,43 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadimagefromdatauri" class="tsd-anchor"></a>
+					<h3>load<wbr>Image<wbr>From<wbr>Data<wbr>Uri</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Image<wbr>From<wbr>Data<wbr>Uri<span class="tsd-signature-symbol">(</span>dataUri<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, placement<span class="tsd-signature-symbol">?: </span><a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L146">index.ts:146</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Place an image on the canvas at a specified location, using a data URI as the source</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataUri: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data URI to load image data from</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> placement: <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a><span class="tsd-signature-symbol"> =&nbsp;{ x: 0, y: 0 }</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The coordinates to place the image at</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="setcolor" class="tsd-anchor"></a>
 					<h3>set<wbr>Color</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -250,7 +301,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L71">index.ts:71</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L103">index.ts:103</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -281,7 +332,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L80">index.ts:80</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L112">index.ts:112</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -309,7 +360,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/7c5a31b/src/index.ts#L110">index.ts:110</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/b82a65a/src/index.ts#L160">index.ts:160</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -342,7 +393,7 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="editor.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="editor.html#c" class="tsd-kind-icon">c</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
@@ -354,14 +405,11 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="editor.html#defaultlinewidth" class="tsd-kind-icon">default<wbr>Line<wbr>Width</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="editor.html#isdrawing" class="tsd-kind-icon">is<wbr>Drawing</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="editor.html#lastx" class="tsd-kind-icon">lastX</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="editor.html#lasty" class="tsd-kind-icon">lastY</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="editor.html#loadbackgroundimagefromdatauri" class="tsd-kind-icon">load<wbr>Background<wbr>Image<wbr>From<wbr>Data<wbr>Uri</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="editor.html#loadimagefromdatauri" class="tsd-kind-icon">load<wbr>Image<wbr>From<wbr>Data<wbr>Uri</a>
@@ -379,6 +427,9 @@
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/icoordinates.html" class="tsd-kind-icon">ICoordinates</a>
+					</li>
 					<li class=" tsd-kind-interface">
 						<a href="../interfaces/ieditoroptions.html" class="tsd-kind-icon">IEditor<wbr>Options</a>
 					</li>
