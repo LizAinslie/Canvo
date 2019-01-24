@@ -45,6 +45,11 @@ class Line {
 		this.pointB = newCoords;
 	}
 
+	/**
+	 * Draw the line on a canvas using a CanvasRenderingContext2D
+	 * @param {CanvasRenderingContext2D} ctx The context to render the line with
+	 * @returns {void}
+	 */
 	public draw(ctx: CanvasRenderingContext2D): void {
 		ctx.beginPath();
 		ctx.moveTo(this.pointA.x, this.pointA.y);

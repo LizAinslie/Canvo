@@ -40,9 +40,7 @@ class Editor {
 
 		this.c = this.canvas.getContext('2d');
 
-		// Bind events
-		this.handleMouseDown = this.handleMouseDown.bind(this);
-
+		this.bindEvents();
 		this.initEvents();
 	}
 
@@ -54,6 +52,14 @@ class Editor {
 	public addItemToStage(item: Drawable): void {
 		if (typeof item.draw !== 'function') throw new Error('Item must be drawable (have a draw() method that accepts a CanvasRenderingContext2D as parameter `ctx`)');
 		this.items.push(item);
+	}
+
+	/**
+	 * Bind canvas events
+	 * @returns {void}
+	 */
+	private bindEvents(): void {
+		this.handleMouseDown = this.handleMouseDown.bind(this);
 	}
 
 	/**

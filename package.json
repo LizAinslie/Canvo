@@ -35,5 +35,8 @@
         "image-editor",
         "image-manipulation",
         "canvas"
-    ]
+    ],
+    "dependencies": {
+        "gulp-better-rollup": "^3.4.0"
+    }
 }
