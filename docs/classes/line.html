@@ -94,13 +94,16 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="line.html#color" class="tsd-kind-icon">color</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="line.html#pointa" class="tsd-kind-icon">pointA</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="line.html#pointb" class="tsd-kind-icon">pointB</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="line.html#width" class="tsd-kind-icon">width</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="line.html#draw" class="tsd-kind-icon">draw</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="line.html#setpointa" class="tsd-kind-icon">set<wbr>PointA</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="line.html#setpointb" class="tsd-kind-icon">set<wbr>PointB</a></li>
 							</ul>
@@ -114,13 +117,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Line<span class="tsd-signature-symbol">(</span>pointA<span class="tsd-signature-symbol">: </span><a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a>, pointB<span class="tsd-signature-symbol">: </span><a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="line.html" class="tsd-signature-type">Line</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Line<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/ilineoptions.html" class="tsd-signature-type">ILineOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="line.html" class="tsd-signature-type">Line</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Objects/Line.ts:8</li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L13">Objects/Line.ts:13</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -131,18 +134,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>pointA: <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></h5>
+									<h5>options: <a href="../interfaces/ilineoptions.html" class="tsd-signature-type">ILineOptions</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
-											<p>The line&#39;s initial <code>A</code> point</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<h5>pointB: <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-											<p>The line&#39;s initial <code>B</code> point</p>
+											<p>Options to create the line with</p>
 										</div>
 									</div>
 								</li>
@@ -155,12 +150,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="color" class="tsd-anchor"></a>
+					<h3>color</h3>
+					<div class="tsd-signature tsd-kind-icon">color<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L12">Objects/Line.ts:12</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="pointa" class="tsd-anchor"></a>
 					<h3>pointA</h3>
 					<div class="tsd-signature tsd-kind-icon">pointA<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Objects/Line.ts:7</li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L10">Objects/Line.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -170,13 +175,46 @@
 					<div class="tsd-signature tsd-kind-icon">pointB<span class="tsd-signature-symbol">:</span> <a href="../interfaces/icoordinates.html" class="tsd-signature-type">ICoordinates</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Objects/Line.ts:8</li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L11">Objects/Line.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="width" class="tsd-anchor"></a>
+					<h3>width</h3>
+					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L13">Objects/Line.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="draw" class="tsd-anchor"></a>
+					<h3>draw</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">draw<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CanvasRenderingContext2D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L48">Objects/Line.ts:48</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ctx: <span class="tsd-signature-type">CanvasRenderingContext2D</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="setpointa" class="tsd-anchor"></a>
 					<h3>set<wbr>PointA</h3>
@@ -187,7 +225,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Objects/Line.ts:25</li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L35">Objects/Line.ts:35</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -218,7 +256,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Objects/Line.ts:34</li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/Objects/Line.ts#L44">Objects/Line.ts:44</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -251,6 +289,15 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="../enums/basiccolor.html" class="tsd-kind-icon">Basic<wbr>Color</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/styleframework.html" class="tsd-kind-icon">Style<wbr>Framework</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/width.html" class="tsd-kind-icon">Width</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="editor.html" class="tsd-kind-icon">Editor</a>
 					</li>
@@ -263,10 +310,19 @@
 								<a href="line.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="line.html#color" class="tsd-kind-icon">color</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="line.html#pointa" class="tsd-kind-icon">pointA</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="line.html#pointb" class="tsd-kind-icon">pointB</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="line.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="line.html#draw" class="tsd-kind-icon">draw</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="line.html#setpointa" class="tsd-kind-icon">set<wbr>PointA</a>
@@ -282,7 +338,16 @@
 						<a href="../interfaces/icoordinates.html" class="tsd-kind-icon">ICoordinates</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ieditorcontrolsoptions.html" class="tsd-kind-icon">IEditor<wbr>Controls<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/ieditoroptions.html" class="tsd-kind-icon">IEditor<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ilineoptions.html" class="tsd-kind-icon">ILine<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#drawable" class="tsd-kind-icon">Drawable</a>
 					</li>
 				</ul>
 			</nav>

@@ -96,12 +96,14 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="editor.html#c" class="tsd-kind-icon">c</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="editor.html#canvas" class="tsd-kind-icon">canvas</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="editor.html#controlsdiv" class="tsd-kind-icon">controls<wbr>Div</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="editor.html#items" class="tsd-kind-icon">items</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="editor.html#additemtostage" class="tsd-kind-icon">add<wbr>Item<wbr>ToStage</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="editor.html#handlemousedown" class="tsd-kind-icon">handle<wbr>Mouse<wbr>Down</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="editor.html#initevents" class="tsd-kind-icon">init<wbr>Events</a></li>
 							</ul>
@@ -121,7 +123,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/railrunner166/Canvo/blob/ca1fb3f/src/index.ts#L18">index.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L23">index.ts:23</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -154,7 +156,7 @@
 					<div class="tsd-signature tsd-kind-icon">c<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CanvasRenderingContext2D</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/railrunner166/Canvo/blob/ca1fb3f/src/index.ts#L18">index.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L19">index.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -169,7 +171,7 @@
 					<div class="tsd-signature tsd-kind-icon">canvas<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLCanvasElement</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/railrunner166/Canvo/blob/ca1fb3f/src/index.ts#L14">index.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L15">index.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -178,13 +180,28 @@
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="controlsdiv" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagOptional">Optional</span> controls<wbr>Div</h3>
+					<div class="tsd-signature tsd-kind-icon">controls<wbr>Div<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLElement</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L23">index.ts:23</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The rendering div for the editor&#39;s controls</p>
+						</div>
+					</div>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="items" class="tsd-anchor"></a>
 					<h3>items</h3>
-					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <a href="../globals.html#drawable" class="tsd-signature-type">Drawable</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/railrunner166/Canvo/blob/ca1fb3f/src/index.ts#L10">index.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L11">index.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -194,8 +211,39 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="additemtostage" class="tsd-anchor"></a>
+					<h3>add<wbr>Item<wbr>ToStage</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Item<wbr>ToStage<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../globals.html#drawable" class="tsd-signature-type">Drawable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L54">index.ts:54</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Add an item to the editor</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <a href="../globals.html#drawable" class="tsd-signature-type">Drawable</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The item to add</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a name="handlemousedown" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> handle<wbr>Mouse<wbr>Down</h3>
@@ -206,7 +254,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/railrunner166/Canvo/blob/ca1fb3f/src/index.ts#L51">index.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L72">index.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,7 +285,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/railrunner166/Canvo/blob/ca1fb3f/src/index.ts#L42">index.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/RailRunner166/Canvo/blob/3fbd97c/src/index.ts#L63">index.ts:63</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -261,6 +309,15 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-enum">
+						<a href="../enums/basiccolor.html" class="tsd-kind-icon">Basic<wbr>Color</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/styleframework.html" class="tsd-kind-icon">Style<wbr>Framework</a>
+					</li>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/width.html" class="tsd-kind-icon">Width</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
@@ -275,8 +332,14 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="editor.html#canvas" class="tsd-kind-icon">canvas</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="editor.html#controlsdiv" class="tsd-kind-icon">controls<wbr>Div</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="editor.html#items" class="tsd-kind-icon">items</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="editor.html#additemtostage" class="tsd-kind-icon">add<wbr>Item<wbr>ToStage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
 								<a href="editor.html#handlemousedown" class="tsd-kind-icon">handle<wbr>Mouse<wbr>Down</a>
@@ -295,7 +358,16 @@
 						<a href="../interfaces/icoordinates.html" class="tsd-kind-icon">ICoordinates</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ieditorcontrolsoptions.html" class="tsd-kind-icon">IEditor<wbr>Controls<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/ieditoroptions.html" class="tsd-kind-icon">IEditor<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ilineoptions.html" class="tsd-kind-icon">ILine<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#drawable" class="tsd-kind-icon">Drawable</a>
 					</li>
 				</ul>
 			</nav>

@@ -1,4 +1,7 @@
-import ICoordinates from "../Interfaces/ICoordinates";
+import ICoordinates from '../Interfaces/ICoordinates';
+import ILineOptions from '../Interfaces/ILineOptions';
+import BasicColor from '../Enums/BasicColor';
+import Width from '../Enums/Width';
 
 /**
  * A line
@@ -11,14 +14,17 @@ class Line {
 
 	/**
 	 * Create a new Line
-	 * @param {ICoordinates} pointA The line's initial `A` point
-	 * @param {ICoordinates} pointB The line's initial `B` point
+	 * @param {ILineOptions} options Options to create the line with
+	 * @param {ICoordinates} options.pointA The line's initial `A` point
+	 * @param {ICoordinates} options.pointB The line's initial `B` point
+	 * @param {string} [options.color] The line's initial color
+	 * @param {number} [options.width] The line's initial width
 	 */
-	constructor(pointA: ICoordinates, pointB: ICoordinates, color: string, width: number) {
-		this.pointA = pointA;
-		this.pointB = pointB;
-		this.color = color;
-		this.width = width
+	constructor(options: ILineOptions) {
+		this.pointA = options.pointA;
+		this.pointB = options.pointB;
+		this.color = options.color || BasicColor.BLACK;
+		this.width = options.width || Width.MD;
 	}
 
 	/**
@@ -39,7 +45,7 @@ class Line {
 		this.pointB = newCoords;
 	}
 
-	private draw(ctx: CanvasRenderingContext2D): void {
+	public draw(ctx: CanvasRenderingContext2D): void {
 		ctx.beginPath();
 		ctx.moveTo(this.pointA.x, this.pointA.y);
 		ctx.lineTo(this.pointB.x, this.pointB.y);
