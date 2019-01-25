@@ -3610,9 +3610,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 typedoc-canvo-theme@^0.1.2:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/typedoc-canvo-theme/-/typedoc-canvo-theme-0.1.7.tgz#f1b5ca0da0157d2f8c0795099cb05a6c26982e01"
-  integrity sha512-/vt/bGbXBVaZ3jewu8CZWVIke0b3mAkLtVxIZVvNWTwHV/Sf70lJX2BaPDcPJsmNAHW74n1+HMLZyF037nhVgA==
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/typedoc-canvo-theme/-/typedoc-canvo-theme-0.1.8.tgz#46b15cb91af144bfba29ad9eb6bd83b0adbdad7c"
+  integrity sha512-QnNGqfNGX5bmsgM5YPqbq7faR0W+QXLf+/kjFALN91F8VlM9MCFe4Xt62cwyq+WHwnA7NgexEUbKR8QZQu3bkA==
 
 typedoc-default-themes@^0.5.0:
   version "0.5.0"

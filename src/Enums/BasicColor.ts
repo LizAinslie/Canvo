@@ -21,6 +21,11 @@ enum BasicColor {
 	 * Purple. The hex is `#336699`
 	 */
 	PURPLE = '#663399',
+
+	/**
+	 * Green. The hex is `#28a745`
+	 */
+	GREEN = '#28a745',
 }
 
 export default BasicColor;

@@ -74,14 +74,17 @@ class Line {
 		ctx.beginPath();
 		ctx.moveTo(this.pointA.x, this.pointA.y);
 		ctx.lineTo(this.pointB.x, this.pointB.y);
-		ctx.strokeStyle = this.color || 'black';
+		ctx.strokeStyle = this.color || BasicColor.BLACK;
 		ctx.lineWidth = this.width || 1;
 		ctx.stroke();
 		ctx.moveTo(this.pointA.x, this.pointA.y)
 	}
 
 	/**
-	 * Init events for the editor
+	 * Initialise events for the editor
+	 * @param {CanvasRenderingContext2D} ctx The context to render event driven objects with
+	 * @param {HTMLCanvasElement} canvas The canvas element to attach events to
+	 * @returns {void}
 	 */
 	public initEditorEvents(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement): void {
 		canvas.addEventListener('click', (e: MouseEvent) => {

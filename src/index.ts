@@ -83,3 +83,4 @@ class Editor {
 export default Editor;
 
 export * from './Objects/Line';
+export * from './Objects/Circle';
