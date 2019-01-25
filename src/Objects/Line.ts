@@ -8,11 +8,23 @@ import Width from '../Enums/Width';
  */
 class Line {
 	/**
-	 * The a point of the line
+	 * The `A` point of the line
 	 */
 	public pointA: ICoordinates;
+
+	/**
+	 * The `B` point of the line
+	 */
 	public pointB: ICoordinates;
+
+	/**
+	 * The color of the line
+	 */
 	public color: string;
+
+	/**
+	 * The width of the line
+	 */
 	public width: number;
 
 	/**
