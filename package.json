@@ -27,6 +27,7 @@
         "ts-node": "^7.0.1",
         "tslint": "^5.12.1",
         "typedoc": "^0.14.2",
+        "typedoc-canvo-theme": "^0.1.2",
         "typescript": "^3.2.4"
     },
     "keywords": [
@@ -35,8 +36,5 @@
         "image-editor",
         "image-manipulation",
         "canvas"
-    ],
-    "dependencies": {
-        "gulp-better-rollup": "^3.4.0"
-    }
+    ]
 }

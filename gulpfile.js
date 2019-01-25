@@ -1,10 +1,6 @@
 const gulp = require('gulp');
 const typedoc = require('gulp-typedoc');
-const rollup = require('gulp-better-rollup');
-const typescript = require('rollup-plugin-typescript2');
-const { terser } = require('rollup-plugin-terser');
-
-const pkg = require('./package.json');
+const path = require('path');
 
 gulp.task('docs', function() {
     return gulp.src(['src/**/*.ts'])
@@ -18,5 +14,6 @@ gulp.task('docs', function() {
 		hideGenerator: true,
 		readme: 'README.md',
 		mode: 'file',
+		theme: './node_modules/typedoc-canvo-theme/bin/default',
     }));
 });

@@ -7,10 +7,18 @@ import Width from '../Enums/Width';
  * A line
  */
 class Line {
+	/**
+	 * The a point of the line
+	 */
 	public pointA: ICoordinates;
 	public pointB: ICoordinates;
 	public color: string;
 	public width: number;
+
+	/**
+	 * The radius of the line handles
+	 */
+	private handlesRadius: number = 15;
 
 	/**
 	 * Create a new Line
@@ -58,6 +66,34 @@ class Line {
 		ctx.lineWidth = this.width || 1;
 		ctx.stroke();
 		ctx.moveTo(this.pointA.x, this.pointA.y)
+	}
+
+	/**
+	 * Init events for the editor
+	 */
+	public initEditorEvents(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement): void {
+		canvas.addEventListener('click', (e: MouseEvent) => {
+			const rect = canvas.getBoundingClientRect();
+			const clickCoords: ICoordinates = {
+				x: e.clientX - rect.left,
+				y: e.clientY - rect.top,
+			}
+			if (Math.sqrt(
+				(clickCoords.x - this.pointA.x) *
+				(clickCoords.x - this.pointA.x) +
+				(clickCoords.y - this.pointA.y) *
+				(clickCoords.y - this.pointA.y)
+			) <= this.handlesRadius) {
+				this.handlesRadius = 10;
+			} else if (Math.sqrt(
+				(clickCoords.x - this.pointB.x) *
+				(clickCoords.x - this.pointB.x) +
+				(clickCoords.y - this.pointB.y) *
+				(clickCoords.y - this.pointB.y)
+			) <= this.handlesRadius) {
+				this.handlesRadius = 10;
+			}
+		});
 	}
 }
 
