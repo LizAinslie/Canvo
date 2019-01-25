@@ -14,6 +14,6 @@ gulp.task('docs', function() {
 		hideGenerator: true,
 		readme: 'README.md',
 		mode: 'file',
-		theme: './node_modules/typedoc-canvo-theme/bin/default',
+		theme: './node_modules/typedoc-canvo-theme/bin/minimal',
     }));
 });

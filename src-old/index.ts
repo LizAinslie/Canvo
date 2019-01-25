@@ -79,7 +79,7 @@ class Editor {
         });
 
         this.canvas.addEventListener('mousemove', this.draw);
-        this.canvas.addEventListener('mouseup', () => this.stopDrawing);
+        this.canvas.addEventListener('mouseup', this.stopDrawing);
         this.canvas.addEventListener('mouseout', this.stopDrawing);
     }
 

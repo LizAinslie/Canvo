@@ -3,27 +3,27 @@
  */
 enum BasicColor {
 	/**
-	 * Black. You should know the hex, but in case you don't, it is `#000000`.
+	 * Pure black.
 	 */
 	BLACK = '#000000',
 
 	/**
-	 * White. You should know the hex, but in case you don't, it is `#ffffff`.
+	 * Pure White.
 	 */
 	WHITE = '#ffffff',
 
 	/**
-	 * Matte red. The hex is `#dd4535`
+	 * Matte red.
 	 */
 	RED = '#dd4535',
 
 	/**
-	 * Purple. The hex is `#336699`
+	 * RebeccaPurple.
 	 */
 	PURPLE = '#663399',
 
 	/**
-	 * Green. The hex is `#28a745`
+	 * Bright green.
 	 */
 	GREEN = '#28a745',
 }

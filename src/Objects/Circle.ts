@@ -69,7 +69,21 @@ class Circle {
 	 * @returns {void}
 	 */
 	public initEditorEvents(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement): void {
-		// Do stuff here later
+		canvas.addEventListener('click', (e: MouseEvent) => {
+			const rect = canvas.getBoundingClientRect();
+			const clickCoords: ICoordinates = {
+				x: e.clientX - rect.left,
+				y: e.clientY - rect.top,
+			}
+			if (Math.sqrt(
+				(clickCoords.x - this.center.x) *
+				(clickCoords.x - this.center.x) +
+				(clickCoords.y - this.center.y) *
+				(clickCoords.y - this.center.y)
+			) <= this.handlesRadius) {
+				this.handlesRadius = 10;
+			}
+		});
 	}
 }
 

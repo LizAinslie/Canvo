@@ -1,0 +1,5 @@
+ports:
+- port: 5000
+- port: 4000
+tasks:
+- command: npm i -g serve
