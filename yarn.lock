@@ -3617,9 +3617,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 typedoc-canvo-theme@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/typedoc-canvo-theme/-/typedoc-canvo-theme-0.2.2.tgz#ed9199eaa3a5a8d7fc93883c0da1f21e8dbd32d4"
-  integrity sha512-aGfqEXEAuUysJXxy7YF86VrYcKhtu+/TF1N8ss6pwwpzAuJskYjWkyRibvIaZHBJWOPWWSDBDdYESE7znwORBw==
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/typedoc-canvo-theme/-/typedoc-canvo-theme-0.2.7.tgz#a1fb8f9f621fb93d33a81d92aa1187952b7d7090"
+  integrity sha512-hPI6OON0PjlyA3XMXZcTHEpN8f2EQujTIjaR3EgSxoePmOoRoGcbkzmRQ/m0YQrIsiLoEg+VKHpBRaGDtScy3Q==
 
 typedoc-default-themes@^0.5.0:
   version "0.5.0"
