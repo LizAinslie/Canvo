@@ -1,6 +1,6 @@
 interface IShapeOutline {
-	color?: string
-	width?: number
+	color?: string;
+	width?: number;
 }
 
 export default IShapeOutline;

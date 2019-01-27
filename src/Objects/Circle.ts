@@ -1,7 +1,7 @@
-import ICoordinates from '../Interfaces/ICoordinates';
-import ICircleOptions from '../Interfaces/ICircleOptions';
-import IShapeOutline from '../Interfaces/IShapeOutline';
 import BasicColor from '../Enums/BasicColor';
+import ICircleOptions from '../Interfaces/ICircleOptions';
+import ICoordinates from '../Interfaces/ICoordinates';
+import IShapeOutline from '../Interfaces/IShapeOutline';
 
 /**
  * A circle
@@ -41,7 +41,7 @@ class Circle {
 		this.color = options.color || BasicColor.BLACK;
 		this.outline = options.outline || {
 			color: BasicColor.BLACK,
-			width: 0
+			width: 0,
 		};
 	}
 
@@ -54,7 +54,8 @@ class Circle {
 		ctx.beginPath();
 		ctx.arc(this.center.x, this.center.y, this.radius, 0, 2 * Math.PI, false);
 		ctx.fillStyle = this.color;
-      	ctx.fill();
+		ctx.fill();
+
 		if (this.outline) {
 			ctx.strokeStyle = this.outline.color;
 			ctx.lineWidth = this.outline.width;
@@ -74,12 +75,13 @@ class Circle {
 			const clickCoords: ICoordinates = {
 				x: e.clientX - rect.left,
 				y: e.clientY - rect.top,
-			}
+			};
+
 			if (Math.sqrt(
 				(clickCoords.x - this.center.x) *
 				(clickCoords.x - this.center.x) +
 				(clickCoords.y - this.center.y) *
-				(clickCoords.y - this.center.y)
+				(clickCoords.y - this.center.y),
 			) <= this.handlesRadius) {
 				this.handlesRadius = 10;
 			}

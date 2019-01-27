@@ -31,7 +31,7 @@ class Editor {
 	 */
 	constructor(options: IEditorOptions) {
 		if (options.canvas instanceof HTMLCanvasElement) this.canvas = options.canvas;
-		else this.canvas = <HTMLCanvasElement>document.getElementById(options.canvas);
+		else this.canvas = document.getElementById(options.canvas) as HTMLCanvasElement;
 
 		if (options.controls) {
 			if (options.controls instanceof HTMLElement) this.controlsDiv = options.controls;
@@ -50,7 +50,8 @@ class Editor {
 	 * @returns {void}
 	 */
 	public addItemToStage(item: Drawable): void {
-		if (typeof item.draw !== 'function') throw new Error('Item must be drawable (have a draw() method that accepts a CanvasRenderingContext2D as parameter `ctx`)');
+		if (typeof item.draw !== 'function')
+			throw new Error('Item must be drawable (have a draw() method that accepts a canvas context as parameter `ctx`)');
 		this.items.push(item);
 	}
 

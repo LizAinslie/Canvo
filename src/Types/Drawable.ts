@@ -1,7 +1,7 @@
-import Line from '../Objects/Line';
 import Circle from '../Objects/Circle';
+import Line from '../Objects/Line';
 
 type Drawable = Line |
-				Circle
+	Circle;
 
 export default Drawable;

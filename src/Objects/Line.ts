@@ -1,7 +1,7 @@
-import ICoordinates from '../Interfaces/ICoordinates';
-import ILineOptions from '../Interfaces/ILineOptions';
 import BasicColor from '../Enums/BasicColor';
 import Width from '../Enums/Width';
+import ICoordinates from '../Interfaces/ICoordinates';
+import ILineOptions from '../Interfaces/ILineOptions';
 
 /**
  * A line
@@ -77,7 +77,7 @@ class Line {
 		ctx.strokeStyle = this.color || BasicColor.BLACK;
 		ctx.lineWidth = this.width || 1;
 		ctx.stroke();
-		ctx.moveTo(this.pointA.x, this.pointA.y)
+		ctx.moveTo(this.pointA.x, this.pointA.y);
 	}
 
 	/**
@@ -92,19 +92,20 @@ class Line {
 			const clickCoords: ICoordinates = {
 				x: e.clientX - rect.left,
 				y: e.clientY - rect.top,
-			}
+			};
+
 			if (Math.sqrt(
 				(clickCoords.x - this.pointA.x) *
 				(clickCoords.x - this.pointA.x) +
 				(clickCoords.y - this.pointA.y) *
-				(clickCoords.y - this.pointA.y)
+				(clickCoords.y - this.pointA.y),
 			) <= this.handlesRadius) {
 				this.handlesRadius = 10;
 			} else if (Math.sqrt(
 				(clickCoords.x - this.pointB.x) *
 				(clickCoords.x - this.pointB.x) +
 				(clickCoords.y - this.pointB.y) *
-				(clickCoords.y - this.pointB.y)
+				(clickCoords.y - this.pointB.y),
 			) <= this.handlesRadius) {
 				this.handlesRadius = 10;
 			}
